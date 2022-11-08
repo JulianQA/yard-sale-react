@@ -1,0 +1,15 @@
+@import '../utils/variables';
+
+.ProductList {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 240px);
+   place-content: center;
+   gap: 24px;
+   margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+   .ProductList {
+      grid-template-columns: repeat(auto-fill, 148px);
+   }
+}

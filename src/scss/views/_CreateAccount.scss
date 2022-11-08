@@ -1,0 +1,62 @@
+@import '../utils/variables';
+
+.myaccount {
+   width: 100%;
+   height: 93vh;
+   display: grid;
+   place-items: center;
+
+   &__form-container {
+      display: grid;
+      width: 300px;
+      grid-template-rows: auto 1fr auto;
+
+      .form-container__title {
+         text-align: start;
+         font-size: $text-lg;
+         margin-bottom: 40px;
+      }
+
+      .form {
+         display: flex;
+         flex-direction: column;
+
+         &__label {
+            font-size: $text-sm;
+            font-weight: bold;
+            margin-bottom: 4px;
+         }
+
+         input {
+            border: none;
+            background-color: $text-input-color;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            height: 32px;
+            font-size: $text-md;
+            padding: 8px;
+         }
+      }
+   }
+}
+
+// .primary-button {
+//    border: none;
+//    background-color: $secondary-color;
+//    color: $primary-color;
+//    font-weight: bold;
+//    cursor: pointer;
+//    height: 52px;
+//    border-radius: 8px;
+//    font-size: $text-lg;
+//    width: 100%;
+// }
+
+@media (max-width: 640px) {
+   .create-button {
+      position: absolute;
+      bottom: 0;
+      width: inherit;
+      margin-bottom: 12px;
+   }
+}

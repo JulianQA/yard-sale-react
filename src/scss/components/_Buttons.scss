@@ -1,0 +1,25 @@
+@import '../utils/variables';
+
+.primary-button {
+   border: none;
+   background-color: $secondary-color;
+   color: $primary-color;
+   font-weight: bold;
+   cursor: pointer;
+   height: 52px;
+   border-radius: 8px;
+   font-size: $text-lg;
+   width: 100%;
+}
+
+.secondary-button {
+   border: 1px solid $secondary-color;
+   background-color: $primary-color;
+   color: $secondary-color;
+   font-weight: bold;
+   cursor: pointer;
+   height: 48px;
+   border-radius: 8px;
+   font-size: $text-lg;
+   width: 100%;
+}

@@ -1,0 +1,33 @@
+@import '../utils/variables';
+
+.product-info {
+   margin: 24px 24px 0 24px;
+}
+
+.product-info p:nth-child(1) {
+   font-weight: bold;
+   font-size: $text-md;
+   margin-top: 0;
+   margin-bottom: 4px;
+}
+
+.product-info p:nth-child(2) {
+   color: $details-color;
+   font-size: $text-md;
+   margin-top: 0;
+   margin-bottom: 36px;
+}
+
+.product-info p:nth-child(3) {
+   color: $details-color;
+   font-size: $text-sm;
+   margin-top: 0;
+   margin-bottom: 36px;
+}
+
+
+.add-to-cart-button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

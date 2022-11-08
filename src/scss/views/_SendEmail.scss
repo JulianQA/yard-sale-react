@@ -1,0 +1,75 @@
+@import '../utils/variables';
+
+.send-email {
+   width: 100%;
+   height: 93vh;
+   display: grid;
+   place-items: center;
+
+   &__layout {
+      display: grid;
+      width: 300px;
+      grid-template-rows: auto 1fr auto;
+      justify-items: center;
+   }
+
+   &__resend {
+      font-size: $text-sm;
+   }
+}
+
+.send-email__resend span {
+   color: $details-color;
+}
+
+.send-email__resend a {
+   color: $secondary-color;
+   text-decoration: none;
+}
+
+.layout {
+   &__logo {
+      width: 150px;
+      justify-self: center;
+      margin-bottom: 48px;
+      display: none;
+   }
+
+   &__title {
+      text-align: center;
+      font-size: $text-lg;
+   }
+
+   &__subtitle {
+      text-align: center;
+      font-size: $text-md;
+      color: $details-color;
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 32px;
+   }
+
+   &__icon-email {
+      background-color: $text-input-color;
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+         width: 80px;
+      }
+   }
+}
+
+.resend {}
+
+
+
+@media (max-width: 640px) {
+   .layout__logo {
+      display: block;
+   }
+}

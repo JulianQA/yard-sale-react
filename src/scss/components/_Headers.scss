@@ -1,0 +1,112 @@
+@import '../utils/variables';
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   padding: 0 24px;
+   border-bottom: 1px solid $details-color;
+   height: 7vh;
+
+   .navbar-left {
+      display: flex;
+      font-size: $text-sm;
+
+      ul li a {
+         text-decoration: none;
+         color: $details-color;
+         border: 1px solid $primary-color;
+         padding: 8px;
+         border-radius: 8px;
+      }
+
+      ul li a:hover {
+         color: $secondary-color;
+         border: 1px solid $secondary-color;
+      }
+   }
+}
+
+.navbar-left ul,
+.navbar-right ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   margin-left: 12px;
+   height: 60px;
+}
+
+.icon-menu {
+   display: none;
+}
+
+.icon-menu:hover {
+   cursor: pointer;
+}
+
+.logo {
+   width: 120px;
+}
+
+.navbar-email {
+   color: $details-color;
+   font-size: $text-sm;
+   margin-right: 12px;
+}
+
+.arrow {
+   margin-right: 24px;
+   transform: rotate(90deg);
+}
+
+.arrow:hover {
+   cursor: pointer;
+}
+
+.navbar-shoppingcart {
+   position: relative;
+}
+
+.navbar-shoppingcart div {
+   background-color: $secondary-color;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 16px;
+   height: 16px;
+   font-size: $text-sm;
+   font-weight: bold;
+   position: absolute;
+   top: -6px;
+   right: -6px;
+}
+
+.navbar-shoppingcart:hover {
+   cursor: pointer;
+}
+
+.inactive {
+   display: none;
+}
+
+@media (max-width:768px) {
+   .icon-menu {
+      display: block;
+   }
+
+   .navbar-left ul,
+   .navbar-email,
+   .arrow,
+   .desktop-menu {
+      display: none;
+   }
+
+}
+
+@media (min-width: 769px) {
+   .mobile-menu {
+      display: none;
+   }
+}

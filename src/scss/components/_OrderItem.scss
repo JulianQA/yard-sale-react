@@ -1,0 +1,29 @@
+@import '../utils/variables';
+
+.order-item {
+   display: grid;
+   grid-template-columns: auto 1fr auto auto;
+   gap: 16px;
+   margin-bottom: 24px;
+   align-items: center;
+}
+
+.order-item figure {
+   margin: 0;
+}
+
+.order-item figure img {
+   width: 70px;
+   height: 70px;
+   border-radius: 8px;
+   object-fit: cover;
+}
+
+.order-item p:nth-child(2) {
+   color: $details-color;
+}
+
+.order-item p:nth-child(3) {
+   font-size: $text-md;
+   font-weight: bold;
+}

@@ -1,0 +1,41 @@
+@import '../utils/variables';
+
+.MyOrder {
+   width: 100%;
+   height: 93vh;
+   display: grid;
+   place-items: center;
+}
+
+.title-header {
+   font-size: $text-lg;
+   font-weight: bold;
+}
+
+.my-order-container {
+   width: 300px;
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+   gap: 12px;
+}
+
+.my-order-container h1 {
+   font-size: $text-lg;
+   margin-bottom: 32px;
+}
+
+.my-order-content {
+   display: flex;
+   flex-direction: column;
+}
+
+.my-order-total {
+   display: grid;
+   grid-template-columns: auto auto;
+   gap: 16px;
+   background-color: $text-input-color;
+   border-radius: 8px;
+   padding: 0 12px;
+   margin-bottom: 24px;
+   align-items: center;
+}

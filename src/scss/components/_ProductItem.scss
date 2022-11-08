@@ -1,0 +1,57 @@
+@import '../utils/variables';
+
+.product-item {
+   width: 240px;
+}
+
+.product-item img {
+   width: 240px;
+   height: 240px;
+   border-radius: 24px;
+   object-fit: cover;
+}
+
+.product-detail {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 12px;
+}
+
+.product-detail figure {
+   margin: 0;
+}
+
+.product-detail figure img {
+   width: 32px;
+   height: 32px;
+}
+
+.product-detail div p:nth-child(1) {
+   font-weight: bold;
+   font-size: $text-md;
+   margin-top: 0;
+   margin-bottom: 4px;
+}
+
+.product-detail div p:nth-child(2) {
+   font-size: $text-sm;
+   margin-top: 0;
+   color: $details-color;
+   margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+   .card-container {
+      grid-template-columns: repeat(auto-fill, 148px);
+   }
+
+   .product-item {
+      width: 148px;
+   }
+
+   .product-item img {
+      width: 148px;
+      height: 148px;
+   }
+}
