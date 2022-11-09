@@ -1,11 +1,12 @@
 import React from 'react'
 import { ProductInfo } from './ProductInfo'
+import close from "../assets/icons/icon_close.png";
 
 function ProductDetail() {
    return (
       <aside class="ProductDetail">
          <div class="close-background">
-            <img src="./icons/icon_close.png" alt="icon-close" />
+            <img src={close} alt="icon-close" />
          </div>
          <ProductInfo />
       </aside>

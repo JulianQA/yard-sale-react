@@ -1,5 +1,5 @@
 import React from 'react'
-
+import close from "../assets/icons/icon_close.png"
 function ShoppinCartItem() {
    return (
       <div className="shopping-cart-item">
@@ -8,7 +8,7 @@ function ShoppinCartItem() {
          </figure>
          <p>Bike</p>
          <p>$30.00</p>
-         <img src="./icons/icon_close.png" alt="close" className="icon-close" />
+         <img src={close} alt="close" className="icon-close" />
       </div>
    )
 }

@@ -1,11 +1,15 @@
 import React from 'react'
+import iconMenu from '../assets/icons/icon_menu.svg';
+import logo from "../assets/logos/logo_yard_sale.svg";
+import arrow from "../assets/icons/flechita.svg";
+import shopppingCart from "../assets/icons/icon_shopping_cart.svg";
 
 function Header() {
    return (
       <nav>
-         <img src="./icons/icon_menu.svg" alt="menu" className="icon-menu" />
+         <img src={iconMenu} alt="menu" className="icon-menu" />
          <div className="navbar-left">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+            <img src={logo} alt="logo" className="nav__logo" />
             <ul>
                <li>
                   <a href="/">All</a>
@@ -32,9 +36,9 @@ function Header() {
                <li className="navbar-email">
                   <p>camilayokoo@example.com</p>
                </li>
-               <img src="./icons/flechita.svg" alt="arrow" className="arrow" />
+               <img src={arrow} alt="arrow" className="arrow" />
                <li className="navbar-shoppingcart">
-                  <img src="./icons/icon_shopping_cart.svg" alt="icon_shopping_cart" />
+                  <img src={shopppingCart} alt="icon_shopping_cart" />
                   <div>2</div>
                </li>
             </ul>

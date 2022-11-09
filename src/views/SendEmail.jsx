@@ -1,16 +1,18 @@
 import React from 'react'
 import { Button } from '../components/Button'
+import logo from "../assets/logos/logo_yard_sale.svg";
+import iconEmail from "../assets/icons/email.svg"
 function SendEmail() {
    return (
       <div className="send-email">
          <div className="send-email__layout">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" className="layout__logo" />
+            <img src={logo} alt="logo" className="layout__logo" />
 
             <h1 className="layout__title">Email has been sent</h1>
             <p className="layout__subtitle">Please check your inbox for instructions on how to reset the password</p>
 
             <div className="layout__icon-email">
-               <img src="./icons/email.svg" alt="iconEmail" />
+               <img src={iconEmail} alt="iconEmail" />
             </div>
 
             <Button

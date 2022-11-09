@@ -1,5 +1,5 @@
 import React from 'react'
-
+import addToCart from "../assets/icons/bt_add_to_cart.svg"
 function ProductInfo() {
    return (
       <>
@@ -10,7 +10,7 @@ function ProductInfo() {
             <p> With its functional and practical design, this bike also fulfills a decorative function, adding personality and a retro-vintage aesthetic to your house.</p>
          </div>
          <button className="primary-button addtocart-button">
-            <img src="./icons/bt_add_to_cart.svg" alt="addtocart-button" />
+            <img src={addToCart} alt="addtocart-button" />
             Add to cart
          </button>
       </>
