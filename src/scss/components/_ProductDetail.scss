@@ -4,17 +4,24 @@
    width: 360px;
    position: absolute;
    right: 0;
+   background-color: $primary-color;
 }
 
 .close-background {
    position: absolute;
-   background-color: var(--white);
+   background-color: $primary-color;
    top: 12px;
    left: 8px;
-   width: 16px;
-   height: 16px;
+   width: 24px;
+   height: 24px;
    border-radius: 50%;
    padding: 4px;
+}
+
+.close-background img {
+   position: absolute;
+   top: calc(50% - 7px);
+   right: calc(50% - 7px);
 }
 
 .close-background:hover {

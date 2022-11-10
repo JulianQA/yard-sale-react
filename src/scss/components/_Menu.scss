@@ -5,6 +5,7 @@
    top: 7vh;
    right: 60px;
    border: 1px solid $details-color;
+   background-color: $primary-color;
    border-radius: 0 0 12px 12px;
    width: 150px;
    height: auto;
@@ -26,11 +27,12 @@
    text-decoration: none;
 }
 
-.menu ul li:nth-child(1) a,
-.menu ul li:nth-child(2) a {
+.menu ul li:nth-child(1),
+.menu ul li:nth-child(2) {
    font-weight: bold;
    font-size: $text-md;
    color: $text-color;
+   cursor: pointer;
 }
 
 .menu ul li:last-child {

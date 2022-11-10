@@ -9,7 +9,6 @@ import { CreateNewPassword } from '../views/CreateNewPassword';
 import { SendEmail } from '../views/SendEmail';
 import { Header } from './Header';
 import { Orders } from '../views/Orders';
-import { MyOrder } from './MyOrder';
 import { AppContext } from '../utils/context/AppContext';
 import { useInitialState } from '../utils/hooks/useInitialState';
 
@@ -26,7 +25,6 @@ function App() {
           <Route path='/account' element={<Account />} />
           <Route path='/sign-up' element={<CreateAccount />} />
           <Route path='/orders' element={<Orders />} />
-          <Route path='/order' element={<MyOrder />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>

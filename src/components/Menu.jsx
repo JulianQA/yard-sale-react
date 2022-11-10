@@ -1,14 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Menu() {
+   const navigate = useNavigate();
    return (
       <div className="menu">
          <ul>
             <li>
-               <a href="/">My orders</a>
+               My orders
+               {/* <a href="/">My orders</a> */}
             </li>
-            <li>
-               <a href="/">My account</a>
+            <li onClick={() => navigate('/account')}>
+               My account
+               {/* <a href="/">My account</a> */}
             </li>
             <li>
                <a href="/">Sign out</a>

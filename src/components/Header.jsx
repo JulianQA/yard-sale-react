@@ -6,6 +6,7 @@ import arrow from "../assets/icons/flechita.svg";
 import shopppingCart from "../assets/icons/icon_shopping_cart.svg";
 import { AppContext } from '../utils/context/AppContext';
 import { MyOrder } from './MyOrder';
+import { useNavigate } from 'react-router-dom';
 
 
 function Header() {
@@ -15,11 +16,21 @@ function Header() {
    const handleToogleMenu = () => {
       setToggleMenu(!toggleMenu);
    }
+   const navigate = useNavigate();
    return (
       <nav>
-         <img src={iconMenu} alt="menu" className="icon-menu" />
+         <img
+            src={iconMenu}
+            alt="menu"
+            className="icon-menu"
+         />
          <div className="navbar-left">
-            <img src={logo} alt="logo" className="nav__logo" />
+            <img
+               src={logo}
+               alt="logo"
+               className="nav__logo"
+               onClick={() => navigate('/')}
+            />
             <ul>
                <li>
                   <a href="/">All</a>
