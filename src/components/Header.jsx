@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Menu } from './Menu';
 import iconMenu from '../assets/icons/icon_menu.svg';
 import logo from "../assets/logos/logo_yard_sale.svg";
 import arrow from "../assets/icons/flechita.svg";
 import shopppingCart from "../assets/icons/icon_shopping_cart.svg";
-
+import { AppContext } from '../utils/context/AppContext';
 function Header() {
    const [toggleMenu, setToggleMenu] = useState(false);
-
+   const { state } = useContext(AppContext);
    const handleToogleMenu = () => {
       setToggleMenu(!toggleMenu);
    }
@@ -45,7 +45,14 @@ function Header() {
                <img src={arrow} alt="arrow" className="arrow" onClick={handleToogleMenu} />
                <li className="navbar-shoppingcart">
                   <img src={shopppingCart} alt="icon_shopping_cart" />
-                  <div>2</div>
+                  {
+                     state.cart.length > 0 &&
+                        state.cart.length >= 9
+                        ?
+                        <div>9+</div>
+                        :
+                        <div>{state.cart.length}</div>
+                  }
                </li>
             </ul>
          </div>

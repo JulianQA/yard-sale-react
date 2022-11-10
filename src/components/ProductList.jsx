@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGetProducts } from '../hooks/useGetProducts';
+import { useGetProducts } from '../utils/hooks/useGetProducts';
 import { ProductItem } from './ProductItem'
 
 const URL_API = 'https://api.escuelajs.co/api/v1/products';
