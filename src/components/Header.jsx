@@ -5,8 +5,12 @@ import logo from "../assets/logos/logo_yard_sale.svg";
 import arrow from "../assets/icons/flechita.svg";
 import shopppingCart from "../assets/icons/icon_shopping_cart.svg";
 import { AppContext } from '../utils/context/AppContext';
+import { MyOrder } from './MyOrder';
+
+
 function Header() {
    const [toggleMenu, setToggleMenu] = useState(false);
+   const [toggleOrder, setToggleOrder] = useState(false);
    const { state } = useContext(AppContext);
    const handleToogleMenu = () => {
       setToggleMenu(!toggleMenu);
@@ -43,20 +47,27 @@ function Header() {
                   <p>camilayokoo@example.com</p>
                </li>
                <img src={arrow} alt="arrow" className="arrow" onClick={handleToogleMenu} />
-               <li className="navbar-shoppingcart">
+               <li
+                  className="navbar-shoppingcart"
+                  onClick={() => { setToggleOrder(!toggleOrder) }}
+               >
                   <img src={shopppingCart} alt="icon_shopping_cart" />
                   {
-                     state.cart.length > 0 &&
-                        state.cart.length >= 9
+                     state.cart.length > 0
                         ?
-                        <div>9+</div>
+                        state.cart.length >= 9
+                           ?
+                           <div>9+</div>
+                           :
+                           <div>{state.cart.length}</div>
                         :
-                        <div>{state.cart.length}</div>
+                        null
                   }
                </li>
             </ul>
          </div>
          {toggleMenu && <Menu />}
+         {toggleOrder && <MyOrder />}
          <div className="mobile-menu inactive">
             <ul>
                <li>

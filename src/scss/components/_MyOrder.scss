@@ -1,10 +1,16 @@
 @import '../utils/variables';
 
 .MyOrder {
-   width: 100%;
-   height: 93vh;
+   position: absolute;
+   top: 7vh;
+   right: 0;
+   min-width: 320px;
+   width: 350px;
+   background-color: $primary-color;
    display: grid;
+   padding: 10px;
    place-items: center;
+   border-radius: 8px;
 }
 
 .title-header {
@@ -19,6 +25,11 @@
    gap: 12px;
 }
 
+.my-order__arrow {
+   transform: rotate(180deg);
+   cursor: pointer;
+}
+
 .my-order-container h1 {
    font-size: $text-lg;
    margin-bottom: 32px;
@@ -29,9 +40,10 @@
    flex-direction: column;
 }
 
-.my-order-total {
-   display: grid;
-   grid-template-columns: auto auto;
+.my-order__total {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
    gap: 16px;
    background-color: $text-input-color;
    border-radius: 8px;
@@ -39,4 +51,7 @@
    padding: 0 12px;
    margin-bottom: 24px;
    align-items: center;
+   font-size: $text-md;
+   font-weight: bold;
+
 }

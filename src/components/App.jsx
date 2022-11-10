@@ -9,7 +9,7 @@ import { CreateNewPassword } from '../views/CreateNewPassword';
 import { SendEmail } from '../views/SendEmail';
 import { Header } from './Header';
 import { Orders } from '../views/Orders';
-import { MyOrder } from '../views/MyOrder';
+import { MyOrder } from './MyOrder';
 import { AppContext } from '../utils/context/AppContext';
 import { useInitialState } from '../utils/hooks/useInitialState';
 
