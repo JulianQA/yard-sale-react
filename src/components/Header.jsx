@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Menu } from './Menu';
 import iconMenu from '../assets/icons/icon_menu.svg';
 import logo from "../assets/logos/logo_yard_sale.svg";
 import arrow from "../assets/icons/flechita.svg";
 import shopppingCart from "../assets/icons/icon_shopping_cart.svg";
 
 function Header() {
+   const [toggleMenu, setToggleMenu] = useState(false);
+
+   const handleToogleMenu = () => {
+      setToggleMenu(!toggleMenu);
+   }
    return (
       <nav>
          <img src={iconMenu} alt="menu" className="icon-menu" />
@@ -33,16 +39,17 @@ function Header() {
          </div>
          <div className="navbar-right">
             <ul>
-               <li className="navbar-email">
+               <li className="navbar-email" onClick={handleToogleMenu}>
                   <p>camilayokoo@example.com</p>
                </li>
-               <img src={arrow} alt="arrow" className="arrow" />
+               <img src={arrow} alt="arrow" className="arrow" onClick={handleToogleMenu} />
                <li className="navbar-shoppingcart">
                   <img src={shopppingCart} alt="icon_shopping_cart" />
                   <div>2</div>
                </li>
             </ul>
          </div>
+         {toggleMenu && <Menu />}
          <div className="mobile-menu inactive">
             <ul>
                <li>

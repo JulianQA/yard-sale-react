@@ -1,9 +1,12 @@
 @import '../utils/variables';
 
 .menu {
+   position: absolute;
+   top: 7vh;
+   right: 60px;
    border: 1px solid $details-color;
-   border-radius: 12px;
-   width: 100px;
+   border-radius: 0 0 12px 12px;
+   width: 150px;
    height: auto;
    padding: 20px 20px 0 20px;
 }

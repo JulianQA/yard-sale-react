@@ -2,7 +2,7 @@ import React from 'react'
 
 function Menu() {
    return (
-      <div className="menu inactive">
+      <div className="menu">
          <ul>
             <li>
                <a href="/">My orders</a>
