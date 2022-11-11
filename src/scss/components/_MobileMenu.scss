@@ -1,0 +1,31 @@
+@import '../utils/variables';
+
+.mobile-menu {
+   position: absolute;
+   top: 7vh;
+   left: 0;
+   width: 100%;
+   padding: 12px 24px;
+   background-color: $primary-color;
+
+   li {
+      margin-bottom: 12px;
+   }
+
+   a {
+      text-decoration: none;
+      font-size: $text-md;
+      color: $text-color;
+      font-weight: bold;
+   }
+
+   ul:nth-child(2),
+   ul:nth-child(1) {
+      border-bottom: 1px solid $text-color;
+   }
+
+   ul:nth-child(2),
+   ul:nth-child(3) {
+      padding-top: 4px;
+   }
+}

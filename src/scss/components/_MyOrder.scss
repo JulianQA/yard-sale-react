@@ -35,9 +35,20 @@
    margin-bottom: 32px;
 }
 
-.my-order-content {
+.my-order__content {
    display: flex;
    flex-direction: column;
+   max-height: 485px;
+   overflow-y: scroll;
+
+   &::-webkit-scrollbar {
+      width: 8px;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      background-color: $secondary-color;
+      border-radius: 4px;
+   }
 }
 
 .my-order__total {

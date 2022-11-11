@@ -7,14 +7,18 @@ import shopppingCart from "../assets/icons/icon_shopping_cart.svg";
 import { AppContext } from '../utils/context/AppContext';
 import { MyOrder } from './MyOrder';
 import { useNavigate } from 'react-router-dom';
+import { MobileMenu } from './MobileMenu';
 
 
 function Header() {
    const [toggleMenu, setToggleMenu] = useState(false);
    const [toggleOrder, setToggleOrder] = useState(false);
+   const [toggleMenuMobile, setToggleMenuMobile] = useState(false);
+
    const { state } = useContext(AppContext);
    const handleToogleMenu = () => {
       setToggleMenu(!toggleMenu);
+      setToggleOrder(false);
    }
    const navigate = useNavigate();
    return (
@@ -23,6 +27,7 @@ function Header() {
             src={iconMenu}
             alt="menu"
             className="icon-menu"
+            onClick={() => setToggleMenuMobile(!toggleMenuMobile)}
          />
          <div className="navbar-left">
             <img
@@ -60,7 +65,7 @@ function Header() {
                <img src={arrow} alt="arrow" className="arrow" onClick={handleToogleMenu} />
                <li
                   className="navbar-shoppingcart"
-                  onClick={() => { setToggleOrder(!toggleOrder) }}
+                  onClick={() => { setToggleOrder(!toggleOrder); setToggleMenu(false) }}
                >
                   <img src={shopppingCart} alt="icon_shopping_cart" />
                   {
@@ -78,48 +83,9 @@ function Header() {
             </ul>
          </div>
          {toggleMenu && <Menu />}
-         {toggleOrder && <MyOrder />}
-         <div className="mobile-menu inactive">
-            <ul>
-               <li>
-                  <a href="/">CATEGORIES</a>
-               </li>
-               <li>
-                  <a href="/">All</a>
-               </li>
-               <li>
-                  <a href="/">Clothes</a>
-               </li>
-               <li>
-                  <a href="/">Electronics</a>
-               </li>
-               <li>
-                  <a href="/">Furnitures</a>
-               </li>
-               <li>
-                  <a href="/">Toys</a>
-               </li>
-               <li>
-                  <a href="/">Others</a>
-               </li>
-            </ul>
-            <ul>
-               <li>
-                  <a href="/">My orders</a>
-               </li>
-               <li>
-                  <a href="/">My account</a>
-               </li>
-            </ul>
-            <ul>
-               <li>
-                  <a href="/" className="email">camilayokoo@example.com</a>
-               </li>
-               <li>
-                  <a href="/" className="sign-out">Sign out</a>
-               </li>
-            </ul>
-         </div>
+         {toggleOrder && <MyOrder setToggleOrder={setToggleOrder} />}
+         {toggleMenuMobile && <MobileMenu />}
+
       </nav>
    )
 }

@@ -7,6 +7,10 @@ nav {
    padding: 0 24px;
    border-bottom: 1px solid $details-color;
    height: 7vh;
+   position: fixed;
+   top: 0;
+   background-color: $primary-color;
+   width: 100%;
 
    .navbar-left {
       display: flex;
