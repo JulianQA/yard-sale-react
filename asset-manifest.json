@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/yard-sale-react/static/css/main.ae5d2e5e.css",
-    "main.js": "/yard-sale-react/static/js/main.e6d9f43e.js",
+    "main.css": "/yard-sale-react/static/css/main.b0452c98.css",
+    "main.js": "/yard-sale-react/static/js/main.86113ccf.js",
     "static/media/logo_yard_sale.svg": "/yard-sale-react/static/media/logo_yard_sale.f5c1d07e0dba172463639e02bacccd32.svg",
     "static/media/bt_add_to_cart.svg": "/yard-sale-react/static/media/bt_add_to_cart.c13587f7a917cacfc4722859eba06bca.svg",
     "static/media/icon_shopping_cart.svg": "/yard-sale-react/static/media/icon_shopping_cart.6ee019074975f25fb7927a83133327c4.svg",
@@ -9,11 +9,12 @@
     "index.html": "/yard-sale-react/index.html",
     "static/media/icon_menu.svg": "/yard-sale-react/static/media/icon_menu.3aa38c5e16715afedfa9b1adb8607b7d.svg",
     "static/media/flechita.svg": "/yard-sale-react/static/media/flechita.e419d8c93e852173b9b8261835467277.svg",
-    "main.ae5d2e5e.css.map": "/yard-sale-react/static/css/main.ae5d2e5e.css.map",
-    "main.e6d9f43e.js.map": "/yard-sale-react/static/js/main.e6d9f43e.js.map"
+    "static/media/icon-close.svg": "/yard-sale-react/static/media/icon-close.2001e956d267bc9b1a2349ee0a8ee521.svg",
+    "main.b0452c98.css.map": "/yard-sale-react/static/css/main.b0452c98.css.map",
+    "main.86113ccf.js.map": "/yard-sale-react/static/js/main.86113ccf.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae5d2e5e.css",
-    "static/js/main.e6d9f43e.js"
+    "static/css/main.b0452c98.css",
+    "static/js/main.86113ccf.js"
   ]
 }
